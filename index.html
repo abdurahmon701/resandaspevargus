@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+</head>
+<body>
+    <header>
+        <div class="head">
+            <div class="logo">
+                <img src="./img/Vector.svg" alt="">
+                <h1>EVARUGS</h1>
+            </div>
+            <div class="a">
+                <a href="">отзывы</a>
+                <a href="">что это?</a>
+                <a href="">контакты</a>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="lr">
+            <div class="left">
+                <h1>Инновационные коврики 
+                    для автомобиля</h1>
+                <button>ЗАКАЗАТЬ</button>
+            </div>
+            <div class="right">
+                <img src="./img/коврф 1.png" alt="">
+            </div>
+        </div>
+    </section>
+    <section>
+        <h1 class="eva">Что такое EVA коврики?</h1>
+        <div class="cards">
+            <div class="card">
+                <img src="./img/1.jpg" alt="">
+                <h2>MATERIAL</h2>
+                <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit mollitia dolorum nulla excepturi culpa temporibus laudantium aliquam nihil itaque sed.</p>
+            </div>
+            <div class="card">
+                <img src="./img/2.jpg" alt="">
+                <h2>MATERIAL</h2>
+                <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit mollitia dolorum nulla excepturi culpa temporibus laudantium aliquam nihil itaque sed.</p>
+            </div>
+            <div class="card">
+                <img src="./img/3.jpg" alt="">
+                <h2>MATERIAL</h2>
+                <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit mollitia dolorum nulla excepturi culpa temporibus laudantium aliquam nihil itaque sed.</p>
+            </div>
+        </div>
+    </section>
+    <div #swiperRef="" class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><h1>Покупала у ребят коврики для Хундай солярис в подарок молодому человеку. Все очень понравилось. Буду советовать только вас.</h1></div>
+          <div class="swiper-slide"><h1>Покупала у ребят коврики для Хундай солярис в подарок молодому человеку. Все очень понравилось. Буду советовать только вас.</h1></div>
+          <div class="swiper-slide"><h1>Покупала у ребят коврики для Хундай солярис в подарок молодому человеку. Все очень понравилось. Буду советовать только вас.</h1></div>
+          <div class="swiper-slide"><h1>Покупала у ребят коврики для Хундай солярис в подарок молодому человеку. Все очень понравилось. Буду советовать только вас.</h1></div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    
+      <p class="append-buttons">
+        <button class="prepend-2-slides">Prepend 2 Slides</button>
+        <button class="prepend-slide">Prepend Slide</button>
+        <button class="append-slide">Append Slide</button>
+        <button class="append-2-slides">Append 2 Slides</button>
+      </p>
+    
+      <!-- Swiper JS -->
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+      <!-- Initialize Swiper -->
+      <script>
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 3,
+          centeredSlides: true,
+          spaceBetween: 30,
+          pagination: {
+            el: ".swiper-pagination",
+            type: "fraction",
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+    
+        var appendNumber = 4;
+        var prependNumber = 1;
+        document
+          .querySelector(".prepend-2-slides")
+          .addEventListener("click", function (e) {
+            e.preventDefault();
+            swiper.prependSlide([
+              '<div class="swiper-slide">Slide ' + --prependNumber + "</div>",
+              '<div class="swiper-slide">Slide ' + --prependNumber + "</div>",
+            ]);
+          });
+        document
+          .querySelector(".prepend-slide")
+          .addEventListener("click", function (e) {
+            e.preventDefault();
+            swiper.prependSlide(
+              '<div class="swiper-slide">Slide ' + --prependNumber + "</div>"
+            );
+          });
+        document
+          .querySelector(".append-slide")
+          .addEventListener("click", function (e) {
+            e.preventDefault();
+            swiper.appendSlide(
+              '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>"
+            );
+          });
+        document
+          .querySelector(".append-2-slides")
+          .addEventListener("click", function (e) {
+            e.preventDefault();
+            swiper.appendSlide([
+              '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>",
+              '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>",
+            ]);
+          });
+      </script>
+    <footer>
+        <div class="foot">
+            <div class="lft">
+                <h3>МЫ В СОЦИАЛЬНЫХ СЕТЯХ</h3>
+                <img src="./img/512px-Instagram_new 1.png" alt="">
+            </div>
+            <div class="cnt">
+                <h3>КОНТАКТНЫЕ ТЕЛЕФОНЫ</h3>
+                <p>+375 29 292-29-29 (VEL)</p>
+                <p>+375 33 333-33-33 (МТС)</p>
+            </div>
+            <div class="rht">
+                <h3>О НАС</h3>
+                <p>Индивидуальное изготовление EVA ковриков для вашего автомобиля
+
+                    ваш город</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
